@@ -35,7 +35,7 @@ func tailOne(file string, excludePatterns []*regexp.Regexp, logger *syslog.Logge
 		abs, _ := filepath.Abs(file)
 		tag, err = filepath.Rel("/home/atc/workspace/log", abs)
 		if err != nil || strings.Contains(tag, "..") {
-			// use the absolute path if not match
+		// use absolute path if not match
 		tag = abs
 		}
 	}
